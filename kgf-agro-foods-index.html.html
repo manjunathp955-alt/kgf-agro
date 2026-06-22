@@ -1,724 +1,328 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KGF Agro Food Industries Pvt. Ltd. | Pure Jaggery from Aland, Karnataka</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #faf7f0;
-            --color-surface: #f5f0e8;
-            --color-surface-2: #ede8dd;
-            --color-border: rgba(0,0,0,0.09);
-            --color-text: #1a1409;
-            --color-text-muted: #6b5e42;
-            --color-text-faint: #a89270;
-            --color-primary: #4a6741;
-            --color-primary-hover: #355530;
-            --color-accent: #c07c2a;
-            --color-accent-hover: #a0601a;
-            --color-gold: #d4a017;
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Work Sans', 'Helvetica Neue', sans-serif;
-            --shadow-sm: 0 1px 3px rgba(74,40,0,0.07);
-            --shadow-md: 0 4px 16px rgba(74,40,0,0.10);
-            --shadow-lg: 0 12px 40px rgba(74,40,0,0.14);
-            --radius-sm: 0.375rem;
-            --radius-md: 0.625rem;
-            --radius-lg: 1rem;
-            --radius-xl: 1.5rem;
-            --transition: 200ms cubic-bezier(0.16,1,0.3,1);
-            --content-narrow: 680px;
-            --content-default: 980px;
-            --content-wide: 1200px;
-            --text-xs: clamp(0.75rem,0.7rem + 0.25vw,0.875rem);
-            --text-sm: clamp(0.875rem,0.8rem + 0.35vw,1rem);
-            --text-base: clamp(1rem,0.95rem + 0.25vw,1.125rem);
-            --text-lg: clamp(1.125rem,1rem + 0.75vw,1.5rem);
-            --text-xl: clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-            --text-2xl: clamp(2rem,1.2rem + 2.5vw,3.5rem);
-            --text-hero: clamp(2.8rem,1rem + 5vw,5.5rem);
-        }
-        [data-theme="dark"] {
-            --color-bg: #14110a;
-            --color-surface: #1e1a10;
-            --color-surface-2: #26210f;
-            --color-border: rgba(255,255,255,0.08);
-            --color-text: #f0e8d8;
-            --color-text-muted: #b89f72;
-            --color-text-faint: #7a6540;
-            --color-primary: #7db374;
-            --color-primary-hover: #5e9655;
-            --color-accent: #e09840;
-            --color-accent-hover: #c07c2a;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
-        }
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:80px;}
-        body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.7;transition:background var(--transition),color var(--transition);}
-        img,picture,video,svg{display:block;max-width:100%;}
-        ul[role="list"],ol[role="list"]{list-style:none;}
-        input,button,select,textarea{font:inherit;color:inherit;}
-        h1,h2,h3,h4,h5,h6{text-wrap:balance;line-height:1.2;font-family:var(--font-display);}
-        p{text-wrap:pretty;max-width:70ch;}
-        button{cursor:pointer;background:none;border:none;}
-        a{color:inherit;text-decoration:none;transition:color var(--transition);}
-
-        /* NAV */
-        .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,240,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-border);transition:background var(--transition);}
-        [data-theme="dark"] .nav{background:rgba(20,17,10,0.92);}
-        .nav-inner{max-width:var(--content-wide);margin-inline:auto;padding:0 clamp(1rem,4vw,2.5rem);height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
-        .nav-logo{display:flex;align-items:center;gap:0.75rem;}
-        .nav-logo svg{width:40px;height:40px;flex-shrink:0;}
-        .nav-logo-text{display:flex;flex-direction:column;}
-        .nav-logo-name{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--color-primary);line-height:1.1;}
-        .nav-logo-sub{font-size:var(--text-xs);color:var(--color-text-muted);letter-spacing:0.04em;}
-        .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
-        .nav-links a{font-size:var(--text-sm);font-weight:500;color:var(--color-text-muted);transition:color var(--transition);}
-        .nav-links a:hover{color:var(--color-primary);}
-        .nav-actions{display:flex;align-items:center;gap:1rem;}
-        .btn-theme{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-border);color:var(--color-text-muted);transition:all var(--transition);}
-        .btn-theme:hover{border-color:var(--color-primary);color:var(--color-primary);}
-        .btn-primary{background:var(--color-primary);color:#fff;padding:0.6rem 1.4rem;border-radius:var(--radius-sm);font-size:var(--text-sm);font-weight:600;letter-spacing:0.02em;transition:background var(--transition),box-shadow var(--transition);}
-        .btn-primary:hover{background:var(--color-primary-hover);box-shadow:var(--shadow-md);}
-        .hamburger{display:none;flex-direction:column;gap:5px;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid var(--color-border);border-radius:var(--radius-sm);}
-        .hamburger span{display:block;width:20px;height:2px;background:var(--color-text);border-radius:2px;transition:all 0.3s;}
-
-        /* HERO */
-        .hero{min-height:100vh;display:flex;align-items:center;padding-top:72px;background:linear-gradient(160deg, #faf7f0 0%, #f0e8d0 40%, #e8d8b0 100%);position:relative;overflow:hidden;}
-        [data-theme="dark"] .hero{background:linear-gradient(160deg,#14110a 0%,#1e1a10 40%,#26210f 100%);}
-        .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c07c2a' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;pointer-events:none;}
-        .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
-        .hero-blob-1{width:500px;height:500px;top:-100px;right:-80px;background:rgba(192,124,42,0.18);}
-        .hero-blob-2{width:350px;height:350px;bottom:-60px;left:-60px;background:rgba(74,103,65,0.15);}
-        .hero-inner{max-width:var(--content-wide);margin-inline:auto;padding:clamp(3rem,8vw,6rem) clamp(1rem,4vw,2.5rem);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1;}
-        .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(74,103,65,0.12);border:1px solid rgba(74,103,65,0.2);color:var(--color-primary);padding:0.4rem 1rem;border-radius:var(--radius-full, 9999px);font-size:var(--text-xs);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.5rem;}
-        .hero-title{font-size:var(--text-hero);font-weight:800;color:var(--color-text);line-height:1.05;margin-bottom:1.5rem;}
-        .hero-title span{color:var(--color-accent);}
-        .hero-desc{font-size:var(--text-lg);color:var(--color-text-muted);margin-bottom:2.5rem;line-height:1.7;}
-        .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
-        .btn-accent{background:var(--color-accent);color:#fff;padding:0.85rem 2rem;border-radius:var(--radius-sm);font-size:var(--text-base);font-weight:600;transition:all var(--transition);}
-        .btn-accent:hover{background:var(--color-accent-hover);box-shadow:var(--shadow-lg);}
-        .btn-outline{border:2px solid var(--color-primary);color:var(--color-primary);padding:0.75rem 2rem;border-radius:var(--radius-sm);font-size:var(--text-base);font-weight:600;transition:all var(--transition);}
-        .btn-outline:hover{background:var(--color-primary);color:#fff;}
-        .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-        .hero-stat{text-align:center;padding:1.25rem;background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);}
-        [data-theme="dark"] .hero-stat{background:rgba(255,255,255,0.05);}
-        .hero-stat-num{font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;color:var(--color-accent);}
-        .hero-stat-label{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:0.25rem;}
-        .hero-visual{display:flex;flex-direction:column;gap:1.5rem;}
-        .hero-card-main{background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-lg);text-align:center;}
-        [data-theme="dark"] .hero-card-main{background:rgba(255,255,255,0.06);}
-        .hero-card-emoji{font-size:4rem;margin-bottom:1rem;display:block;}
-        .hero-card-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-text);margin-bottom:0.5rem;}
-        .hero-card-sub{font-size:var(--text-sm);color:var(--color-text-muted);}
-        .hero-badges-row{display:flex;gap:0.75rem;flex-wrap:wrap;}
-        .tag{padding:0.5rem 1rem;border-radius:var(--radius-sm);font-size:var(--text-xs);font-weight:600;letter-spacing:0.04em;}
-        .tag-green{background:rgba(74,103,65,0.12);color:var(--color-primary);border:1px solid rgba(74,103,65,0.2);}
-        .tag-gold{background:rgba(212,160,23,0.12);color:var(--color-gold);border:1px solid rgba(212,160,23,0.2);}
-        .tag-brown{background:rgba(192,124,42,0.12);color:var(--color-accent);border:1px solid rgba(192,124,42,0.2);}
-
-        /* SECTIONS */
-        .section{padding:clamp(4rem,8vw,7rem) clamp(1rem,4vw,2.5rem);}
-        .section-inner{max-width:var(--content-default);margin-inline:auto;}
-        .section-inner-wide{max-width:var(--content-wide);margin-inline:auto;}
-        .section-label{font-size:var(--text-xs);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-primary);margin-bottom:0.75rem;}
-        .section-title{font-size:var(--text-2xl);font-weight:800;color:var(--color-text);margin-bottom:1.25rem;line-height:1.15;}
-        .section-desc{font-size:var(--text-base);color:var(--color-text-muted);max-width:60ch;}
-        .section-header{margin-bottom:3.5rem;}
-        .section-alt{background:var(--color-surface);}
-        .section-dark{background:var(--color-primary);color:#fff;}
-
-        /* ABOUT */
-        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-        .about-text .section-desc{margin-bottom:1.5rem;}
-        .about-leaders{display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
-        .leader-card{display:flex;align-items:center;gap:1rem;padding:1.25rem;background:var(--color-surface-2, var(--color-surface));border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);}
-        .leader-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),var(--color-accent));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:#fff;flex-shrink:0;}
-        .leader-name{font-weight:700;font-size:var(--text-base);color:var(--color-text);}
-        .leader-role{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:0.2rem;}
-        .about-visual{background:linear-gradient(135deg,var(--color-surface),var(--color-surface-2,#ede8dd));border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;box-shadow:var(--shadow-md);}
-        .about-fact{display:flex;gap:1rem;align-items:flex-start;}
-        .about-fact-icon{font-size:1.8rem;flex-shrink:0;line-height:1;}
-        .about-fact-title{font-weight:700;font-size:var(--text-sm);color:var(--color-text);margin-bottom:0.25rem;}
-        .about-fact-desc{font-size:var(--text-xs);color:var(--color-text-muted);}
-
-        /* PRODUCTS */
-        .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
-        .product-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform var(--transition),box-shadow var(--transition);}
-        .product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
-        .product-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:5rem;}
-        .product-img-1{background:linear-gradient(135deg,#f5e6c8,#e8c878);}
-        .product-img-2{background:linear-gradient(135deg,#f0e0b0,#d4a830);}
-        .product-img-3{background:linear-gradient(135deg,#d8e8c8,#8ab878);}
-        .product-body{padding:1.75rem;}
-        .product-title{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:0.75rem;}
-        .product-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;margin-bottom:1.25rem;}
-        .product-tags{display:flex;gap:0.5rem;flex-wrap:wrap;}
-
-        /* PROCESS */
-        .process-steps{display:flex;flex-direction:column;gap:0;position:relative;}
-        .process-steps::before{content:'';position:absolute;left:28px;top:28px;bottom:28px;width:2px;background:linear-gradient(to bottom,var(--color-primary),var(--color-accent));opacity:0.3;}
-        .process-step{display:flex;gap:2rem;align-items:flex-start;padding:1.75rem 0;position:relative;}
-        .process-step:not(:last-child){border-bottom:1px solid var(--color-border);}
-        .process-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),var(--color-accent));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:#fff;flex-shrink:0;box-shadow:var(--shadow-md);z-index:1;}
-        .process-title{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:0.5rem;}
-        .process-desc{font-size:var(--text-sm);color:var(--color-text-muted);max-width:55ch;}
-        .process-tag{display:inline-block;margin-top:0.75rem;padding:0.3rem 0.75rem;background:rgba(74,103,65,0.1);color:var(--color-primary);border-radius:var(--radius-sm);font-size:var(--text-xs);font-weight:600;}
-
-        /* WHY US */
-        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-        .why-card{padding:2rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:all var(--transition);}
-        .why-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
-        .why-icon{font-size:2.5rem;margin-bottom:1rem;}
-        .why-title{font-family:var(--font-display);font-size:var(--text-base);font-weight:700;color:var(--color-text);margin-bottom:0.5rem;}
-        .why-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;}
-
-        /* CONTACT */
-        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-        .contact-info{display:flex;flex-direction:column;gap:1.5rem;}
-        .contact-item{display:flex;gap:1rem;align-items:flex-start;}
-        .contact-item-icon{width:44px;height:44px;border-radius:var(--radius-md);background:rgba(74,103,65,0.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
-        .contact-item-label{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:0.25rem;}
-        .contact-item-value{font-size:var(--text-sm);color:var(--color-text);font-weight:500;}
-        .contact-form{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-md);}
-        .form-group{margin-bottom:1.25rem;}
-        .form-label{display:block;font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;}
-        .form-input{width:100%;padding:0.75rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-bg);color:var(--color-text);font-size:var(--text-sm);transition:border-color var(--transition),box-shadow var(--transition);}
-        .form-input:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(74,103,65,0.1);}
-        textarea.form-input{resize:vertical;min-height:120px;}
-        .form-submit{width:100%;padding:0.85rem;background:var(--color-primary);color:#fff;border-radius:var(--radius-md);font-size:var(--text-sm);font-weight:700;letter-spacing:0.04em;transition:all var(--transition);}
-        .form-submit:hover{background:var(--color-primary-hover);box-shadow:var(--shadow-md);}
-
-        /* FOOTER */
-        .footer{background:var(--color-surface);border-top:1px solid var(--color-border);padding:3rem clamp(1rem,4vw,2.5rem);}
-        .footer-inner{max-width:var(--content-wide);margin-inline:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;}
-        .footer-brand-name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:800;color:var(--color-primary);margin-bottom:0.5rem;}
-        .footer-brand-desc{font-size:var(--text-sm);color:var(--color-text-muted);max-width:32ch;line-height:1.6;}
-        .footer-col-title{font-weight:700;font-size:var(--text-sm);color:var(--color-text);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.06em;}
-        .footer-links{display:flex;flex-direction:column;gap:0.6rem;list-style:none;}
-        .footer-links a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color var(--transition);}
-        .footer-links a:hover{color:var(--color-primary);}
-        .footer-bottom{max-width:var(--content-wide);margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--color-border);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
-        .footer-copy{font-size:var(--text-xs);color:var(--color-text-muted);}
-        .footer-gstin{font-size:var(--text-xs);color:var(--color-text-faint);}
-
-        /* DIVIDER */
-        hr.divider{border:none;border-top:1px solid var(--color-border);margin:0;}
-
-        /* MOBILE NAV OPEN */
-        .mobile-menu{display:none;flex-direction:column;gap:0;position:fixed;top:72px;left:0;right:0;background:var(--color-surface);border-bottom:1px solid var(--color-border);z-index:99;padding:1rem 0;box-shadow:var(--shadow-lg);}
-        .mobile-menu a{display:block;padding:0.9rem 2rem;font-size:var(--text-base);font-weight:500;color:var(--color-text);border-bottom:1px solid var(--color-border);}
-        .mobile-menu a:last-child{border:none;}
-        .mobile-menu.open{display:flex;}
-
-        /* ANIMATIONS */
-        @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-        .animate-in{animation:fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards;}
-
-        @media(max-width:900px){
-            .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr;}
-            .hero-visual{display:none;}
-            .products-grid,.why-grid{grid-template-columns:1fr 1fr;}
-            .footer-inner{grid-template-columns:1fr 1fr;}
-            .nav-links{display:none;}
-            .hamburger{display:flex;}
-            .btn-primary{display:none;}
-        }
-        @media(max-width:600px){
-            .products-grid,.why-grid{grid-template-columns:1fr;}
-            .footer-inner{grid-template-columns:1fr;}
-            .hero-stats{grid-template-columns:1fr 1fr;}
-            .footer-bottom{flex-direction:column;text-align:center;}
-        }
-        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}}
-        :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm);}
-        ::selection{background:rgba(74,103,65,0.2);color:var(--color-text);}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KGF Agro Food Industries Pvt. Ltd.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --color-bg:#f7f6f2; --color-surface:#f9f8f5; --color-surface-2:#fbfbf9; --color-border:#d4d1ca;
+      --color-text:#28251d; --color-text-muted:#7a7974; --color-primary:#01696f; --color-primary-hover:#0c4e54;
+      --color-text-inverse:#f9f8f4; --shadow-sm:0 1px 2px rgba(0,0,0,.06); --shadow-md:0 10px 30px rgba(0,0,0,.08);
+      --radius-md:12px; --radius-lg:18px; --space-4:1rem; --space-6:1.5rem; --space-8:2rem; --space-12:3rem;
+      --content:1180px; --font-body:'DM Sans',sans-serif; --font-display:'Playfair Display',serif;
+    }
+    [data-theme="dark"] {
+      --color-bg:#171614; --color-surface:#1c1b19; --color-surface-2:#201f1d; --color-border:#393836;
+      --color-text:#e7e3da; --color-text-muted:#a9a39a; --color-primary:#4f98a3; --color-primary-hover:#67aeb9;
+      --color-text-inverse:#171614; --shadow-sm:0 1px 2px rgba(0,0,0,.2); --shadow-md:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:var(--font-body);background:var(--color-bg);color:var(--color-text);line-height:1.6}
+    img{max-width:100%;display:block} a{text-decoration:none;color:inherit}
+    .container{max-width:var(--content);margin:auto;padding:0 var(--space-6)}
+    .site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}.brand img{width:52px;height:52px;object-fit:contain;background:var(--color-surface);border:1px solid var(--color-border);border-radius:14px;padding:6px}
+    .brand-text strong{display:block}.brand-text span{font-size:.92rem;color:var(--color-text-muted)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem;color:var(--color-text-muted)}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn,.file-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:11px 16px;font-weight:600;border:1px solid var(--color-border);background:var(--color-surface);cursor:pointer}
+    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse);border-color:var(--color-primary)} .btn-primary:hover{background:var(--color-primary-hover)}
+    .hero{padding:72px 0 48px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .eyebrow{font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary);font-weight:700}
+    h1,h2,h3{font-family:var(--font-display);line-height:1.1;margin:0 0 14px} h1{font-size:clamp(2.5rem,5vw,4.6rem)} h2{font-size:clamp(2rem,3vw,3rem)} h3{font-size:1.35rem}
+    .lead{font-size:1.08rem;color:var(--color-text-muted);max-width:64ch}.hero-card,.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+    .hero-card{padding:22px}.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.stat{padding:16px;border-radius:14px;background:var(--color-surface-2);border:1px solid var(--color-border)}
+    .stat strong{display:block;font-size:1.2rem;color:var(--color-primary)} .section{padding:56px 0}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:24px}
+    .grid-3,.grid-4,.team-grid,.gallery-grid,.spec-grid,.finance-grid{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}
+    .team-grid{grid-template-columns:repeat(2,1fr)} .gallery-grid{grid-template-columns:repeat(3,1fr)} .spec-grid{grid-template-columns:repeat(2,1fr)} .finance-grid{grid-template-columns:repeat(4,1fr)}
+    .card{padding:22px}.muted{color:var(--color-text-muted)} .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--color-primary) 12%,var(--color-surface));color:var(--color-primary);font-size:.85rem;font-weight:700}
+    ul.clean{padding-left:18px;margin:10px 0 0} .table-wrap{overflow:auto;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-surface)}
+    table{width:100%;border-collapse:collapse} th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--color-border);vertical-align:top} th{font-size:.9rem;color:var(--color-text-muted);font-weight:700;background:var(--color-surface-2)}
+    .team-card img,.gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--color-border);background:var(--color-surface-2)}
+    .team-card .avatar-fallback,.gallery-item .img-fallback{width:100%;aspect-ratio:4/3;border-radius:14px;border:1px dashed var(--color-border);background:var(--color-surface-2);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);padding:20px;text-align:center}
+    .gallery-tools{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}.upload-note{font-size:.92rem;color:var(--color-text-muted)}
+    .footer{padding:40px 0 60px;color:var(--color-text-muted)}
+    @media (max-width: 960px){.hero-grid,.grid-3,.grid-4,.team-grid,.gallery-grid,.spec-grid,.finance-grid{grid-template-columns:1fr 1fr}.nav{flex-wrap:wrap}.nav-links{width:100%;order:3}}
+    @media (max-width: 640px){.hero-grid,.grid-3,.grid-4,.team-grid,.gallery-grid,.spec-grid,.finance-grid{grid-template-columns:1fr}.hero{padding-top:40px}.section-head{flex-direction:column;align-items:flex-start}}
+  </style>
 </head>
 <body>
-
-<!-- SKIP LINK -->
-<a href="#main" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:.5rem 1rem;z-index:999;transition:top .3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to content</a>
-
-<!-- NAV -->
-<header class="nav" role="banner">
-    <div class="nav-inner">
-        <a href="#home" class="nav-logo" aria-label="KGF Agro Food Industries home">
-            <!-- SVG LOGO -->
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="20" cy="20" r="20" fill="var(--color-primary)"/>
-                <path d="M12 28 L20 10 L28 28" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14.5 23 L25.5 23" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="20" cy="10" r="2.5" fill="var(--color-accent)"/>
-            </svg>
-            <div class="nav-logo-text">
-                <span class="nav-logo-name">KGF Agro Foods</span>
-                <span class="nav-logo-sub">Pure Jaggery · Aland, Karnataka</span>
-            </div>
-        </a>
-        <nav aria-label="Main navigation">
-            <ul class="nav-links" role="list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#why">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav-actions">
-            <button class="btn-theme" data-theme-toggle aria-label="Toggle dark mode">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
-            <a href="#contact" class="btn-primary">Get a Quote</a>
-            <button class="hamburger" aria-label="Open menu" id="hamburger" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img id="siteLogo" src="./assets/logo.png" alt="KGF Agro Food Industries logo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+        <div id="logoFallback" style="display:none;width:52px;height:52px;border-radius:14px;background:var(--color-surface);border:1px solid var(--color-border);align-items:center;justify-content:center;font-weight:700;color:var(--color-primary);">KGF</div>
+        <div class="brand-text">
+          <strong>KGF Agro Food Industries Pvt. Ltd.</strong>
+          <span>Bhusnoor, Aland, Kalaburagi · 50 TCD Jaggery Plant</span>
         </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#specs">Plant Specs</a>
+        <a href="#financials">Financials</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="file-btn" for="logoInput">Upload Logo</label>
+        <input id="logoInput" type="file" accept="image/*" hidden>
+        <button class="btn" data-theme-toggle aria-label="Toggle theme">Theme</button>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-    <a href="#about" onclick="closeMobileMenu()">About Us</a>
-    <a href="#products" onclick="closeMobileMenu()">Products</a>
-    <a href="#process" onclick="closeMobileMenu()">Our Process</a>
-    <a href="#why" onclick="closeMobileMenu()">Why Choose Us</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact & Quote</a>
-</div>
-
-<main id="main">
-
-<!-- HERO -->
-<section class="hero" id="home" aria-label="Hero section">
-    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-    <div class="hero-inner">
-        <div class="hero-content animate-in">
-            <div class="hero-badge">
-                <span>🌾</span>
-                <span>Karnataka's Premium Jaggery Producer</span>
-            </div>
-            <h1 class="hero-title">Pure Jaggery.<br><span>From Aland's</span><br>Finest Fields.</h1>
-            <p class="hero-desc">50 TCD automatic jaggery plant powered by thermic fluid technology. Farm-fresh, chemical-free, FSSAI-certified jaggery from Bhusnoor village, Kalaburagi.</p>
-            <div class="hero-cta">
-                <a href="#products" class="btn-accent">Our Products →</a>
-                <a href="#contact" class="btn-outline">Bulk Enquiry</a>
-            </div>
-            <div class="hero-stats" aria-label="Plant statistics">
-                <div class="hero-stat"><div class="hero-stat-num">50</div><div class="hero-stat-label">TCD Capacity</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">5 MT</div><div class="hero-stat-label">Daily Output</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">150</div><div class="hero-stat-label">Days / Season</div></div>
-            </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-            <div class="hero-card-main">
-                <span class="hero-card-emoji">🍯</span>
-                <div class="hero-card-title">KGF Agro Food Industries</div>
-                <div class="hero-card-sub">Pvt. Ltd. · Est. 2026 · Bhusnoor, Aland</div>
-            </div>
-            <div class="hero-badges-row">
-                <span class="tag tag-green">✓ FSSAI Certified</span>
-                <span class="tag tag-gold">⭐ ISO 9001 Process</span>
-                <span class="tag tag-brown">🏭 Padma Engineering Plant</span>
-            </div>
-            <div class="hero-badges-row">
-                <span class="tag tag-green">🌾 Zero Chemicals</span>
-                <span class="tag tag-gold">📦 Bulk B2B Supply</span>
-                <span class="tag tag-brown">🚚 APMC Gulbarga</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="divider">
-
-<!-- ABOUT -->
-<section class="section" id="about" aria-labelledby="about-heading">
-    <div class="section-inner">
-        <div class="about-grid">
-            <div class="about-text">
-                <div class="section-header">
-                    <p class="section-label">Our Story</p>
-                    <h2 class="section-title" id="about-heading">Rooted in Aland.<br>Built for India.</h2>
-                    <p class="section-desc">KGF Agro Food Industries Pvt. Ltd. is a family-owned jaggery manufacturing company established in Bhusnoor village, Aland Taluk, Kalaburagi District, Karnataka. Built on a 10-acre ancestral farm, our 50 TCD automatic plant uses a modern thermic fluid heating system to produce pure, chemical-free jaggery that meets FSSAI quality standards.</p>
-                    <p class="section-desc" style="margin-top:1rem;">Founded on the vision of former CAPF veteran Mr. Siddanna Pujari, KGF Agro Foods bridges traditional jaggery-making wisdom with modern food processing technology.</p>
-                </div>
-                <div class="about-leaders" aria-label="Leadership team">
-                    <div class="leader-card">
-                        <div class="leader-avatar">SP</div>
-                        <div>
-                            <div class="leader-name">Siddanna Pujari</div>
-                            <div class="leader-role">Managing Director · Ex-CAPF · OBC Rural Entrepreneur · Promoter</div>
-                        </div>
-                    </div>
-                    <div class="leader-card">
-                        <div class="leader-avatar">MP</div>
-                        <div>
-                            <div class="leader-name">Manjunath Pujari</div>
-                            <div class="leader-role">Director · Operations & Business Development · Bhusnoor, Aland</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-visual" aria-label="Company highlights">
-                <div class="about-fact">
-                    <span class="about-fact-icon">📍</span>
-                    <div>
-                        <div class="about-fact-title">Location</div>
-                        <div class="about-fact-desc">Bhusnoor Village, Aland Taluk, Kalaburagi Dist., Karnataka – 585302</div>
-                    </div>
-                </div>
-                <div class="about-fact">
-                    <span class="about-fact-icon">🌾</span>
-                    <div>
-                        <div class="about-fact-title">Land & Cane</div>
-                        <div class="about-fact-desc">10-acre family farm. Cane sourced from Aland farmers at ₹3,300/MT</div>
-                    </div>
-                </div>
-                <div class="about-fact">
-                    <span class="about-fact-icon">⚙️</span>
-                    <div>
-                        <div class="about-fact-title">Plant</div>
-                        <div class="about-fact-desc">Padma Engineering 50 TCD · 15 LKCal Thermic Fluid Boiler · SS304</div>
-                    </div>
-                </div>
-                <div class="about-fact">
-                    <span class="about-fact-icon">✅</span>
-                    <div>
-                        <div class="about-fact-title">Certifications</div>
-                        <div class="about-fact-desc">FSSAI State Licence · GST Registered · MSME/Udyam Registered</div>
-                    </div>
-                </div>
-                <div class="about-fact">
-                    <span class="about-fact-icon">🏦</span>
-                    <div>
-                        <div class="about-fact-title">Backed By</div>
-                        <div class="about-fact-desc">Agriculture Infrastructure Fund (AIF) · Karnataka FPP IPS Subsidy</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="divider">
-
-<!-- PRODUCTS -->
-<section class="section section-alt" id="products" aria-labelledby="products-heading">
-    <div class="section-inner-wide">
-        <div class="section-header" style="max-width:var(--content-narrow);margin-bottom:3.5rem;">
-            <p class="section-label">What We Make</p>
-            <h2 class="section-title" id="products-heading">Naturally Processed.<br>No Chemicals. No Additives.</h2>
-            <p class="section-desc">Every batch of KGF jaggery is made from freshly crushed sugarcane, clarified with natural agents, and moulded without any artificial colour or preservative.</p>
-        </div>
-        <div class="products-grid" aria-label="Product list">
-            <article class="product-card">
-                <div class="product-img product-img-1" aria-hidden="true">🟫</div>
-                <div class="product-body">
-                    <h3 class="product-title">Solid Jaggery Blocks</h3>
-                    <p class="product-desc">Traditional block-form jaggery in 500g, 1 kg, and 5 kg packaging. Perfect for households, sweet shops, and distributors across Karnataka.</p>
-                    <div class="product-tags">
-                        <span class="tag tag-green">Chemical-Free</span>
-                        <span class="tag tag-gold">FSSAI Certified</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="product-img product-img-2" aria-hidden="true">🟡</div>
-                <div class="product-body">
-                    <h3 class="product-title">Jaggery Powder</h3>
-                    <p class="product-desc">Fine-ground jaggery powder for bakeries, health brands, and packaged food manufacturers. Available in 500g, 1 kg, and 5 kg food-grade packs.</p>
-                    <div class="product-tags">
-                        <span class="tag tag-brown">Health Grade</span>
-                        <span class="tag tag-green">No Additives</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="product-img product-img-3" aria-hidden="true">📦</div>
-                <div class="product-body">
-                    <h3 class="product-title">Bulk B2B Supply</h3>
-                    <p class="product-desc">Direct supply to APMC Gulbarga and Bidar markets, institutional buyers, wholesalers, and food processors. Minimum order: 1 MT. Customised packaging available.</p>
-                    <div class="product-tags">
-                        <span class="tag tag-gold">Min 1 MT</span>
-                        <span class="tag tag-green">APMC Listed</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<hr class="divider">
-
-<!-- PROCESS -->
-<section class="section" id="process" aria-labelledby="process-heading">
-    <div class="section-inner">
-        <div class="section-header">
-            <p class="section-label">How We Make It</p>
-            <h2 class="section-title" id="process-heading">From Field to Mould —<br>5 Careful Steps.</h2>
-            <p class="section-desc">Our fully automatic plant follows a controlled, hygienic 5-stage process that preserves the natural goodness of sugarcane while meeting food safety standards.</p>
-        </div>
-        <ol class="process-steps" aria-label="Manufacturing process steps">
-            <li class="process-step">
-                <div class="process-num" aria-hidden="true">1</div>
-                <div>
-                    <h3 class="process-title">🌾 Cane Sourcing</h3>
-                    <p class="process-desc">Fresh sugarcane sourced directly from Aland-area farmers. 50 tonnes crushed daily during the 150-day season, ensuring freshness and traceability.</p>
-                    <span class="process-tag">50 MT/day · Aland Farmers</span>
-                </div>
-            </li>
-            <li class="process-step">
-                <div class="process-num" aria-hidden="true">2</div>
-                <div>
-                    <h3 class="process-title">⚙️ Crushing</h3>
-                    <p class="process-desc">14"×11" six-roller mill with planetary drive and 19–20 ft cane carrier. Maximum juice extraction with minimum energy, powered by Padma Engineering's precision system.</p>
-                    <span class="process-tag">6-Roller Mill · Planetary Drive</span>
-                </div>
-            </li>
-            <li class="process-step">
-                <div class="process-num" aria-hidden="true">3</div>
-                <div>
-                    <h3 class="process-title">🔥 Clarification & Heating</h3>
-                    <p class="process-desc">SS304 thermic fluid heating system at precisely controlled temperatures — no open flames, no smoke contamination. Juice clarified with 900–1,400 litre pans for consistent colour and Brix.</p>
-                    <span class="process-tag">15 LKCal Boiler · SS304 Pans · No Open Flame</span>
-                </div>
-            </li>
-            <li class="process-step">
-                <div class="process-num" aria-hidden="true">4</div>
-                <div>
-                    <h3 class="process-title">🍯 Moulding & Cooling</h3>
-                    <p class="process-desc">Jaggery poured into standardised moulds, air-cooled under hygienic conditions, and quality-checked for Brix, moisture, and colour grade before release.</p>
-                    <span class="process-tag">QC Checked · Brix &amp; Moisture Test</span>
-                </div>
-            </li>
-            <li class="process-step">
-                <div class="process-num" aria-hidden="true">5</div>
-                <div>
-                    <h3 class="process-title">📦 Packing & Dispatch</h3>
-                    <p class="process-desc">FSSAI-labelled, food-grade packed in 500g, 1kg, 5kg, or bulk options. Dispatched to APMC Gulbarga, Bidar, and direct B2B buyers across Karnataka.</p>
-                    <span class="process-tag">FSSAI Labelled · APMC Approved</span>
-                </div>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<hr class="divider">
-
-<!-- WHY US -->
-<section class="section section-alt" id="why" aria-labelledby="why-heading">
-    <div class="section-inner-wide">
-        <div class="section-header" style="max-width:var(--content-narrow);margin-bottom:3.5rem;">
-            <p class="section-label">Our Advantage</p>
-            <h2 class="section-title" id="why-heading">Why Choose<br>KGF Agro Foods?</h2>
-        </div>
-        <div class="why-grid" aria-label="Key advantages">
-            <div class="why-card">
-                <div class="why-icon">🤝</div>
-                <h3 class="why-title">Farmer-First Sourcing</h3>
-                <p class="why-desc">Cane bought directly from Aland farmers at fair prices. Short supply chain means fresher raw material and better product quality.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">🏭</div>
-                <h3 class="why-title">Modern Automatic Plant</h3>
-                <p class="why-desc">Padma Engineering's 50 TCD thermic fluid system — fully automated, hygienic SS304 construction, zero open-flame risk.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">✅</div>
-                <h3 class="why-title">FSSAI Certified Quality</h3>
-                <p class="why-desc">Every batch tested for Brix, moisture, and colour. FSSAI state licence ensures complete food safety compliance for all buyers.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">🌿</div>
-                <h3 class="why-title">100% Natural</h3>
-                <p class="why-desc">No sulphur. No artificial colour. No preservatives. Pure jaggery the way it should be — straight from the pan to your kitchen.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">📦</div>
-                <h3 class="why-title">Flexible Supply Options</h3>
-                <p class="why-desc">Retail packs from 500g, bulk B2B from 1 MT. Custom labelling and private label available for food brands and distributors.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">🚚</div>
-                <h3 class="why-title">Kalaburagi-Based Logistics</h3>
-                <p class="why-desc">Strategically located near APMC Gulbarga and Bidar. Fast dispatch to North Karnataka, Hyderabad, and Pune markets.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr class="divider">
-
-<!-- CONTACT -->
-<section class="section" id="contact" aria-labelledby="contact-heading">
-    <div class="section-inner-wide">
-        <div class="section-header" style="max-width:var(--content-narrow);margin-bottom:3.5rem;">
-            <p class="section-label">Get In Touch</p>
-            <h2 class="section-title" id="contact-heading">Ready to Order<br>or Partner With Us?</h2>
-            <p class="section-desc">Whether you are a retailer, distributor, food brand, or bulk buyer — we would love to work with you. Reach out for pricing, samples, and supply terms.</p>
-        </div>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-item-icon">📍</div>
-                    <div>
-                        <div class="contact-item-label">Address</div>
-                        <div class="contact-item-value">KGF Agro Food Industries Pvt. Ltd.<br>Bhusnoor Village, Aland Taluk<br>Kalaburagi District, Karnataka – 585302</div>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">👨‍💼</div>
-                    <div>
-                        <div class="contact-item-label">Sales Contact</div>
-                        <div class="contact-item-value">Mr. Manjunath Pujari<br>Director, Operations & Sales</div>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📞</div>
-                    <div>
-                        <div class="contact-item-label">Phone</div>
-                        <div class="contact-item-value">[Your Mobile Number]</div>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
-                    <div>
-                        <div class="contact-item-label">Email</div>
-                        <div class="contact-item-value">[Your Email Address]</div>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">🕐</div>
-                    <div>
-                        <div class="contact-item-label">Office Hours</div>
-                        <div class="contact-item-value">Mon – Sat · 9:00 AM to 6:00 PM IST</div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:1.5rem;">Send an Enquiry</h3>
-                <form onsubmit="handleSubmit(event)" novalidate>
-                    <div class="form-group">
-                        <label class="form-label" for="name">Your Name</label>
-                        <input class="form-input" type="text" id="name" name="name" placeholder="Full name" required autocomplete="name">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="phone">Phone / WhatsApp</label>
-                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="interest">Enquiry Type</label>
-                        <select class="form-input" id="interest" name="interest">
-                            <option value="">Select…</option>
-                            <option>Retail / Household Order</option>
-                            <option>Bulk B2B Supply</option>
-                            <option>Distribution Partnership</option>
-                            <option>Private Label / OEM</option>
-                            <option>General Enquiry</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea class="form-input" id="message" name="message" placeholder="Tell us about your requirement — quantity, location, frequency…"></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">Send Enquiry →</button>
-                    <p id="form-success" style="display:none;margin-top:1rem;color:var(--color-primary);font-weight:600;font-size:var(--text-sm);">✅ Thank you! We will get back to you within 24 hours.</p>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-    <div class="footer-inner">
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-grid">
         <div>
-            <div class="footer-brand-name">KGF Agro Food Industries Pvt. Ltd.</div>
-            <p class="footer-brand-desc">Pure jaggery from Bhusnoor, Aland. Farmed with care. Processed with precision. Delivered fresh.</p>
+          <div class="eyebrow">Automatic thermic fluid jaggery unit</div>
+          <h1>Clean, modern jaggery manufacturing from Bhusnoor.</h1>
+          <p class="lead">KGF Agro Food Industries Pvt. Ltd. is a family-led 50 TCD jaggery manufacturing project structured under a Private Limited company with promoter-owned land leased to the company, combining cleaner bankability, limited liability, and scale-ready food processing operations. [file:376]</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+            <a class="btn btn-primary" href="#financials">View Financial Summary</a>
+            <a class="btn" href="#gallery">Open Gallery</a>
+          </div>
         </div>
-        <div>
-            <div class="footer-col-title">Quick Links</div>
-            <ul class="footer-links" role="list">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#process">Our Process</a></li>
-                <li><a href="#why">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <div class="footer-col-title">Compliance</div>
-            <ul class="footer-links" role="list">
-                <li><a href="#contact">FSSAI Licence</a></li>
-                <li><a href="#contact">MSME / Udyam</a></li>
-                <li><a href="#contact">GST Registered</a></li>
-                <li><a href="#contact">MCA Pvt. Ltd.</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span class="footer-copy">© 2026 KGF Agro Food Industries Pvt. Ltd. All rights reserved.</span>
-        <span class="footer-gstin">Bhusnoor, Aland, Kalaburagi, Karnataka · Pure Jaggery Since 2026</span>
-    </div>
-</footer>
+        <aside class="hero-card">
+          <span class="tag">Quick Overview</span>
+          <div class="hero-stats">
+            <div class="stat"><strong>50 TCD</strong><span class="muted">Cane crushing capacity</span></div>
+            <div class="stat"><strong>150 days</strong><span class="muted">Planned season length</span></div>
+            <div class="stat"><strong>₹2 Cr</strong><span class="muted">Target project setup</span></div>
+            <div class="stat"><strong>SS304</strong><span class="muted">Food-contact process system</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-<script>
-    // Dark mode toggle
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">About the company</div>
+            <h2>Family-owned, bankable, and production-focused.</h2>
+          </div>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Promoter-led structure</h3><p class="muted">The company structure places Siddanna Pujari as Managing Director and promoter, with Manjunath Pujari as Director, while land remains in the promoter family and is leased to the company for cleaner financing and operations planning.</p></article>
+          <article class="card"><h3>Modern jaggery production</h3><p class="muted">The existing site content already describes the project as a 50 TCD automatic thermic fluid jaggery plant serving Karnataka retail and B2B buyers with block and powder jaggery. [file:376]</p></article>
+          <article class="card"><h3>Git-friendly editing</h3><p class="muted">This file is plain HTML, CSS, and JavaScript, so you can edit text in Git, keep local image paths like <code>./assets/logo.png</code>, and later replace desktop uploads with committed files.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">50 TCD plant specs</div>
+            <h2>Technical specifications you can keep on the site.</h2>
+          </div>
+        </div>
+        <div class="spec-grid">
+          <article class="card">
+            <h3>Core process line</h3>
+            <ul class="clean muted">
+              <li>14” × 11” 6-roller mill with drive motors and planetary system.</li>
+              <li>Approx. 19–20 ft cane carrier.</li>
+              <li>Juice clarification and heating system in MS / SS304 configuration.</li>
+              <li>Clarifier and crystallizer pans in the 900–1400 litre range.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Thermic fluid boiler system</h3>
+            <ul class="clean muted">
+              <li>15 LKCal vertical thermic fluid heater setup.</li>
+              <li>Radiant and convective multi-pass heat exchangers.</li>
+              <li>Furnace with nozzle bed, APH, FD fan, ID fan, dust collector, oil pump and expansion tank.</li>
+              <li>Automatic boiler control panel and temperature-linked bagasse feeding.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Utilities and controls</h3>
+            <ul class="clean muted">
+              <li>Oil pipelines, control valves, temperature displays, and pan-wise controls.</li>
+              <li>Juice pump around 260 LPM and 1500-litre juice tank.</li>
+              <li>Electrical cables, MCBs, alarms, indicators, and separate control panels.</li>
+              <li>Staging platform and plant access structure included in machinery scope.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Quoted commercial options</h3>
+            <ul class="clean muted">
+              <li>50 TCD SS304 3-pan system: ₹149.60 lakhs + GST.</li>
+              <li>50 TCD SS304 2-pan system: ₹137.50 lakhs + GST.</li>
+              <li>Delivery after receipt of techno-commercially clear order and 60% advance: 3 to 4 months.</li>
+              <li>Erection and commissioning window: 1 month from receipt of material at site. [file:212]</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="financials" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Financial summary</div>
+            <h2>Editable numbers for your website or Git repo.</h2>
+          </div>
+        </div>
+        <div class="finance-grid" style="margin-bottom:18px;">
+          <div class="card"><span class="muted">Project Cost</span><h3>₹2.00 Cr</h3><p class="muted">Target setup cost for plant, civil works, utilities and pre-operative expenses.</p></div>
+          <div class="card"><span class="muted">AIF Loan</span><h3>₹1.60 Cr</h3><p class="muted">Indicative term loan assumption for project funding.</p></div>
+          <div class="card"><span class="muted">Promoter Equity</span><h3>₹40 Lakh</h3><p class="muted">Indicative contribution from promoter side.</p></div>
+          <div class="card"><span class="muted">Expected FPP Support</span><h3>₹65 Lakh</h3><p class="muted">Keep this editable according to final approved subsidy file.</p></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Metric</th><th>Current Website Figure</th><th>Editable Note</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Plant capacity</td><td>50 TCD</td><td>Replace if final commissioned capacity changes.</td></tr>
+              <tr><td>Season length</td><td>150 days</td><td>Use your DPR assumption.</td></tr>
+              <tr><td>Cane crushing/day</td><td>50 MT/day nominal</td><td>You can add actual utilisation later.</td></tr>
+              <tr><td>Product formats</td><td>Blocks, powder, bulk supply</td><td>Already reflected in current site content. [file:376]</td></tr>
+              <tr><td>Financial model</td><td>Update from DPR / bank sanction</td><td>Edit here after final loan approval.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Leadership team</div>
+            <h2>Promoter and operating leadership.</h2>
+          </div>
+        </div>
+        <div class="team-grid">
+          <article class="card team-card">
+            <img id="teamImg1" src="./assets/siddanna-pujari.jpg" alt="Siddanna Pujari" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="avatar-fallback" style="display:none;">Add <strong style='margin-left:6px;'>./assets/siddanna-pujari.jpg</strong></div>
+            <h3 style="margin-top:16px;">Siddanna Pujari</h3>
+            <p class="muted"><strong>Managing Director</strong></p>
+            <p class="muted">Promoter of KGF Agro Food Industries Pvt. Ltd., ex-CAPF background, land-owning promoter, and primary strategic head for company formation, financing alignment, and plant establishment.</p>
+          </article>
+          <article class="card team-card">
+            <img id="teamImg2" src="./assets/manjunath-pujari.jpg" alt="Manjunath Pujari" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="avatar-fallback" style="display:none;">Add <strong style='margin-left:6px;'>./assets/manjunath-pujari.jpg</strong></div>
+            <h3 style="margin-top:16px;">Manjunath Pujari</h3>
+            <p class="muted"><strong>Director</strong></p>
+            <p class="muted">Handles project execution follow-up, vendor coordination, DPR preparation support, approvals tracking, bank liaison, and day-to-day implementation planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Gallery</div>
+            <h2>Add plant setup, process, and product photos from your desktop.</h2>
+          </div>
+        </div>
+        <div class="gallery-tools">
+          <label class="file-btn" for="galleryInput">Upload Gallery Images</label>
+          <input id="galleryInput" type="file" accept="image/*" multiple hidden>
+          <div class="upload-note">Tip: for Git, later save the same images inside <code>./assets/</code> and replace the uploaded previews with fixed file paths.</div>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <article class="card gallery-item">
+            <img src="./assets/plant-setup-1.jpg" alt="Plant setup view" loading="lazy" onerror="makeFallback(this, 'Add ./assets/plant-setup-1.jpg')">
+            <h3 style="margin-top:14px;">Plant Setup</h3>
+            <p class="muted">Use this block for machinery erection, shed, and boiler installation photos.</p>
+          </article>
+          <article class="card gallery-item">
+            <img src="./assets/process-1.jpg" alt="Jaggery process stage" loading="lazy" onerror="makeFallback(this, 'Add ./assets/process-1.jpg')">
+            <h3 style="margin-top:14px;">Process Line</h3>
+            <p class="muted">Upload cane handling, juice clarification, heating, moulding, and packing images.</p>
+          </article>
+          <article class="card gallery-item">
+            <img src="./assets/jaggery-products-1.jpg" alt="Jaggery products" loading="lazy" onerror="makeFallback(this, 'Add ./assets/jaggery-products-1.jpg')">
+            <h3 style="margin-top:14px;">Jaggery Products</h3>
+            <p class="muted">Use this for blocks, powder, retail packs, and bulk dispatch photos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>KGF Agro Food Industries Pvt. Ltd. · Bhusnoor, Aland, Kalaburagi, Karnataka. This version is prepared for easy Git editing with local asset paths and desktop upload preview support. Existing site content on plant process, products, and company story was used as the baseline for this upgrade. [file:376]</p>
+    </div>
+  </footer>
+
+  <script>
     (function(){
-        const toggle = document.querySelector('[data-theme-toggle]');
-        const root = document.documentElement;
-        let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        function applyTheme(){
-            root.setAttribute('data-theme', dark ? 'dark' : 'light');
-            if(toggle) toggle.innerHTML = dark
-                ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-                : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-        }
-        applyTheme();
-        if(toggle) toggle.addEventListener('click', ()=>{ dark=!dark; applyTheme(); });
+      const btn=document.querySelector('[data-theme-toggle]');
+      const root=document.documentElement;
+      let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      root.setAttribute('data-theme',theme);
+      btn.addEventListener('click',()=>{
+        theme=theme==='dark'?'light':'dark';
+        root.setAttribute('data-theme',theme);
+      });
     })();
 
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', ()=>{
-        const open = mobileMenu.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', open);
-    });
-    function closeMobileMenu(){ mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); }
-
-    // Sticky nav shadow
-    window.addEventListener('scroll', ()=>{
-        document.querySelector('.nav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : '';
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-            if(e.isIntersecting){ e.target.style.animation='fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards'; observer.unobserve(e.target); }
-        });
-    },{threshold:0.12});
-    document.querySelectorAll('.product-card,.why-card,.process-step,.leader-card,.about-fact,.contact-item').forEach(el=>{
-        el.style.opacity='0'; observer.observe(el);
-    });
-
-    // Form submit
-    function handleSubmit(e){
-        e.preventDefault();
-        const success = document.getElementById('form-success');
-        success.style.display = 'block';
-        e.target.reset();
-        setTimeout(()=>{ success.style.display='none'; }, 5000);
+    function previewSingleImage(input, imgId, fallbackId){
+      const file=input.files && input.files[0];
+      if(!file) return;
+      const reader=new FileReader();
+      reader.onload=function(e){
+        const img=document.getElementById(imgId);
+        const fallback=document.getElementById(fallbackId);
+        if(img){ img.src=e.target.result; img.style.display='block'; }
+        if(fallback){ fallback.style.display='none'; }
+      };
+      reader.readAsDataURL(file);
     }
-</script>
+
+    function makeFallback(img, text){
+      const box=document.createElement('div');
+      box.className='img-fallback';
+      box.textContent=text;
+      img.replaceWith(box);
+    }
+
+    document.getElementById('logoInput').addEventListener('change', function(){
+      const file=this.files && this.files[0];
+      if(!file) return;
+      const reader=new FileReader();
+      reader.onload=(e)=>{
+        const img=document.getElementById('siteLogo');
+        img.src=e.target.result;
+        img.style.display='block';
+        document.getElementById('logoFallback').style.display='none';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    document.getElementById('galleryInput').addEventListener('change', function(){
+      const files=[...(this.files||[])];
+      if(!files.length) return;
+      const grid=document.getElementById('galleryGrid');
+      files.forEach((file,index)=>{
+        const reader=new FileReader();
+        reader.onload=(e)=>{
+          const card=document.createElement('article');
+          card.className='card gallery-item';
+          card.innerHTML=`<img src="${e.target.result}" alt="Uploaded gallery image ${index+1}" loading="lazy"><h3 style="margin-top:14px;">Uploaded Image ${index+1}</h3><p class="muted">Replace this caption in Git with the actual setup, process, or product description.</p>`;
+          grid.appendChild(card);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
 </body>
 </html>
